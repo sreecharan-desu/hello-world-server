@@ -8,8 +8,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/', (_req, res) => {
-    console.log(process.env.SREE)
-    res.send("Hello wolrd");
+    res.send(`Hello ${process.env.SREE}`);
 })
 
 app.listen(3000, () => { console.log("Listening on localhost:3000"); });
