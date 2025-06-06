@@ -11,7 +11,8 @@ app.use(cors());
 
 const connect = async () => {
     try {
-        await mongoose.connect("mongodb://localhost:27017");
+        // the mongo container name is "mongo" so ( mongo instead of localhost )
+        await mongoose.connect("mongodb://mongo:27017/myDB");
         console.log("Connected to MongoDB");
     } catch (e) {
         console.error("Failed to connect to MongoDB", e);
