@@ -12,7 +12,7 @@ app.use(cors());
 const connect = async () => {
     try {
         // the mongo container name is "mongoapp" so ( mongoapp instead of localhost )
-        await mongoose.connect("mongodb://mongoapp2:27017/myDB");
+        await mongoose.connect("mongodb://mongoapp:27017/myDB");
         console.log("Connected to MongoDB");
     } catch (e) {
         console.error("Failed to connect to MongoDB", e);
@@ -25,6 +25,6 @@ app.get("/", (_req, res) => {
     res.send(`Hello ${process.env.SREE}`);
 });
 
-app.listen(3001, () => {
-    console.log("Listening on http://localhost:3001");
+app.listen(3000, () => {
+    console.log("Listening on http://localhost:3000");
 });

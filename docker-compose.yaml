@@ -2,7 +2,7 @@ version : "3.8"
 services:
   mongodb:
     image: mongo:latest
-    container_name: mongoapp2  
+    container_name: mongoapp 
     ports:
       - "27017:27017"
     volumes:
@@ -13,7 +13,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: backend2
+    container_name: backend
     ports:
       - "3000:3000"
     networks:
